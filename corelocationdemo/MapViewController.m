@@ -12,6 +12,7 @@
 @interface MapViewController () {
     MKMapView *_mapView;
     CLLocationManager *_locationManager;
+    UILabel *_label;
 }
 
 @end
@@ -23,18 +24,20 @@
     initialCoordinate.latitude = 41.881080;
     initialCoordinate.longitude = -87.701208;
 
-    _mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
+    _mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, 320, 400)];
     [_mapView setRegion:MKCoordinateRegionMakeWithDistance(initialCoordinate, 400, 400) animated:YES];
     [_mapView setCenterCoordinate:initialCoordinate];
     
-    // 1. Alloc and init a location manager
     _locationManager = [[CLLocationManager alloc] init];
-
-    // 2. Set your desired accurracy
     _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    
-    // 3. Provide the user with an explanation of why you need to track location
     _locationManager.purpose = @"Please let me track you! For demo purposes of course.";
+    
+    // 1. Create a label to display lat and long
+    _label = [[UILabel alloc] initWithFrame:CGRectMake(20, 419, 280, 21)];
+    _label.backgroundColor = [UIColor clearColor];
+    _label.textColor = [UIColor whiteColor];
+    _label.textAlignment = UITextAlignmentCenter;
+    _label.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:24.0];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -47,8 +50,9 @@
 }
 
 - (void) initializeLocationManager {
+    // 3. Wire up the location manager delegate to the view controller
+    _locationManager.delegate = self;
     
-    // 4. Check to ensure that location services are enabled.
     if ([CLLocationManager locationServicesEnabled]) {
         LogDebug(@"Location services enabled.");
         [_locationManager startUpdatingLocation];
@@ -61,12 +65,21 @@
     
     [self initializeLocationManager];
     [self.view addSubview:_mapView];
+    [self.view addSubview:_label];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark - Location Manager Callback Methods
+
+// 4. Handle location updates
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+    _label.text = [NSString stringWithFormat:@"%f, %f", newLocation.coordinate.latitude, newLocation.coordinate.longitude];
 }
 
 @end
