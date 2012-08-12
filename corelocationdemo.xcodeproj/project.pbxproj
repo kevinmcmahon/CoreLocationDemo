@@ -13,12 +13,20 @@
 		0ABEF3B815D7F3E70077F5CA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0ABEF3B615D7F3E70077F5CA /* InfoPlist.strings */; };
 		0ABEF3BA15D7F3E70077F5CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABEF3B915D7F3E70077F5CA /* main.m */; };
 		0ABEF3BE15D7F3E70077F5CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABEF3BD15D7F3E70077F5CA /* AppDelegate.m */; };
-		0ABEF3C115D7F3E70077F5CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABEF3C015D7F3E70077F5CA /* ViewController.m */; };
-		0ABEF3C415D7F3E70077F5CA /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ABEF3C215D7F3E70077F5CA /* ViewController.xib */; };
+		0ABEF3CE15D7F41A0077F5CA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ABEF3CA15D7F41A0077F5CA /* Icon.png */; };
+		0ABEF3CF15D7F41A0077F5CA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ABEF3CB15D7F41A0077F5CA /* Icon@2x.png */; };
+		0ABEF3D015D7F41A0077F5CA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ABEF3CC15D7F41A0077F5CA /* Default.png */; };
+		0ABEF3D115D7F41A0077F5CA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ABEF3CD15D7F41A0077F5CA /* Default@2x.png */; };
+		0ABEF3D715D7F6340077F5CA /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABEF3D615D7F6340077F5CA /* MapViewController.m */; };
+		0ABEF3E015D7F9970077F5CA /* Chicago.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 0ABEF3DD15D7F9970077F5CA /* Chicago.gpx */; };
+		0ABEF3E115D7F9970077F5CA /* ChicagoHome.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 0ABEF3DE15D7F9970077F5CA /* ChicagoHome.gpx */; };
+		0ABEF3E215D7F9970077F5CA /* MilleniumPark.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 0ABEF3DF15D7F9970077F5CA /* MilleniumPark.gpx */; };
+		0ABEF3E415D7FAD50077F5CA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ABEF3E315D7FAD50077F5CA /* CoreLocation.framework */; };
+		0ABEF3E615D7FADB0077F5CA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ABEF3E515D7FADB0077F5CA /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0ABEF3A915D7F3E70077F5CA /* corelocationdemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = corelocationdemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ABEF3A915D7F3E70077F5CA /* That Conf 12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "That Conf 12.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ABEF3AD15D7F3E70077F5CA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0ABEF3AF15D7F3E70077F5CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0ABEF3B115D7F3E70077F5CA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -28,9 +36,20 @@
 		0ABEF3BB15D7F3E70077F5CA /* corelocationdemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "corelocationdemo-Prefix.pch"; sourceTree = "<group>"; };
 		0ABEF3BC15D7F3E70077F5CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0ABEF3BD15D7F3E70077F5CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0ABEF3BF15D7F3E70077F5CA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0ABEF3C015D7F3E70077F5CA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		0ABEF3C315D7F3E70077F5CA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		0ABEF3CA15D7F41A0077F5CA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		0ABEF3CB15D7F41A0077F5CA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		0ABEF3CC15D7F41A0077F5CA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		0ABEF3CD15D7F41A0077F5CA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		0ABEF3D315D7F4B20077F5CA /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		0ABEF3D415D7F4CA0077F5CA /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
+		0ABEF3D515D7F6340077F5CA /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		0ABEF3D615D7F6340077F5CA /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		0ABEF3DD15D7F9970077F5CA /* Chicago.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Chicago.gpx; sourceTree = "<group>"; };
+		0ABEF3DE15D7F9970077F5CA /* ChicagoHome.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ChicagoHome.gpx; sourceTree = "<group>"; };
+		0ABEF3DF15D7F9970077F5CA /* MilleniumPark.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = MilleniumPark.gpx; sourceTree = "<group>"; };
+		0ABEF3E315D7FAD50077F5CA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0ABEF3E515D7FADB0077F5CA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0ABEF3E715D802D20077F5CA /* DemoStart.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DemoStart.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ABEF3E615D7FADB0077F5CA /* MapKit.framework in Frameworks */,
+				0ABEF3E415D7FAD50077F5CA /* CoreLocation.framework in Frameworks */,
 				0ABEF3AE15D7F3E70077F5CA /* UIKit.framework in Frameworks */,
 				0ABEF3B015D7F3E70077F5CA /* Foundation.framework in Frameworks */,
 				0ABEF3B215D7F3E70077F5CA /* CoreGraphics.framework in Frameworks */,
@@ -50,6 +71,8 @@
 		0ABEF39E15D7F3E70077F5CA = {
 			isa = PBXGroup;
 			children = (
+				0ABEF3DC15D7F9970077F5CA /* GPX */,
+				0ABEF3D215D7F4220077F5CA /* Resources */,
 				0ABEF3B315D7F3E70077F5CA /* corelocationdemo */,
 				0ABEF3AC15D7F3E70077F5CA /* Frameworks */,
 				0ABEF3AA15D7F3E70077F5CA /* Products */,
@@ -59,7 +82,7 @@
 		0ABEF3AA15D7F3E70077F5CA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0ABEF3A915D7F3E70077F5CA /* corelocationdemo.app */,
+				0ABEF3A915D7F3E70077F5CA /* That Conf 12.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +90,8 @@
 		0ABEF3AC15D7F3E70077F5CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0ABEF3E515D7FADB0077F5CA /* MapKit.framework */,
+				0ABEF3E315D7FAD50077F5CA /* CoreLocation.framework */,
 				0ABEF3AD15D7F3E70077F5CA /* UIKit.framework */,
 				0ABEF3AF15D7F3E70077F5CA /* Foundation.framework */,
 				0ABEF3B115D7F3E70077F5CA /* CoreGraphics.framework */,
@@ -79,10 +104,9 @@
 			children = (
 				0ABEF3BC15D7F3E70077F5CA /* AppDelegate.h */,
 				0ABEF3BD15D7F3E70077F5CA /* AppDelegate.m */,
-				0ABEF3BF15D7F3E70077F5CA /* ViewController.h */,
-				0ABEF3C015D7F3E70077F5CA /* ViewController.m */,
-				0ABEF3C215D7F3E70077F5CA /* ViewController.xib */,
 				0ABEF3B415D7F3E70077F5CA /* Supporting Files */,
+				0ABEF3D515D7F6340077F5CA /* MapViewController.h */,
+				0ABEF3D615D7F6340077F5CA /* MapViewController.m */,
 			);
 			path = corelocationdemo;
 			sourceTree = "<group>";
@@ -90,12 +114,36 @@
 		0ABEF3B415D7F3E70077F5CA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0ABEF3D315D7F4B20077F5CA /* Macros.h */,
 				0ABEF3B515D7F3E70077F5CA /* corelocationdemo-Info.plist */,
 				0ABEF3B615D7F3E70077F5CA /* InfoPlist.strings */,
 				0ABEF3B915D7F3E70077F5CA /* main.m */,
 				0ABEF3BB15D7F3E70077F5CA /* corelocationdemo-Prefix.pch */,
+				0ABEF3D415D7F4CA0077F5CA /* Defines.h */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0ABEF3D215D7F4220077F5CA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0ABEF3CA15D7F41A0077F5CA /* Icon.png */,
+				0ABEF3CB15D7F41A0077F5CA /* Icon@2x.png */,
+				0ABEF3CC15D7F41A0077F5CA /* Default.png */,
+				0ABEF3CD15D7F41A0077F5CA /* Default@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0ABEF3DC15D7F9970077F5CA /* GPX */ = {
+			isa = PBXGroup;
+			children = (
+				0ABEF3DD15D7F9970077F5CA /* Chicago.gpx */,
+				0ABEF3DE15D7F9970077F5CA /* ChicagoHome.gpx */,
+				0ABEF3DF15D7F9970077F5CA /* MilleniumPark.gpx */,
+				0ABEF3E715D802D20077F5CA /* DemoStart.gpx */,
+			);
+			path = GPX;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,7 +163,7 @@
 			);
 			name = corelocationdemo;
 			productName = corelocationdemo;
-			productReference = 0ABEF3A915D7F3E70077F5CA /* corelocationdemo.app */;
+			productReference = 0ABEF3A915D7F3E70077F5CA /* That Conf 12.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -150,7 +198,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ABEF3B815D7F3E70077F5CA /* InfoPlist.strings in Resources */,
-				0ABEF3C415D7F3E70077F5CA /* ViewController.xib in Resources */,
+				0ABEF3CE15D7F41A0077F5CA /* Icon.png in Resources */,
+				0ABEF3CF15D7F41A0077F5CA /* Icon@2x.png in Resources */,
+				0ABEF3D015D7F41A0077F5CA /* Default.png in Resources */,
+				0ABEF3D115D7F41A0077F5CA /* Default@2x.png in Resources */,
+				0ABEF3E015D7F9970077F5CA /* Chicago.gpx in Resources */,
+				0ABEF3E115D7F9970077F5CA /* ChicagoHome.gpx in Resources */,
+				0ABEF3E215D7F9970077F5CA /* MilleniumPark.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +217,7 @@
 			files = (
 				0ABEF3BA15D7F3E70077F5CA /* main.m in Sources */,
 				0ABEF3BE15D7F3E70077F5CA /* AppDelegate.m in Sources */,
-				0ABEF3C115D7F3E70077F5CA /* ViewController.m in Sources */,
+				0ABEF3D715D7F6340077F5CA /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,14 +230,6 @@
 				0ABEF3B715D7F3E70077F5CA /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		0ABEF3C215D7F3E70077F5CA /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0ABEF3C315D7F3E70077F5CA /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -242,7 +288,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "corelocationdemo/corelocationdemo-Prefix.pch";
 				INFOPLIST_FILE = "corelocationdemo/corelocationdemo-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "That Conf 12";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -253,7 +300,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "corelocationdemo/corelocationdemo-Prefix.pch";
 				INFOPLIST_FILE = "corelocationdemo/corelocationdemo-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "That Conf 12";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
