@@ -66,10 +66,9 @@
 }
 
 - (void)registerRegionsForMonitoring {
-    // 1. NOTE: Monitored regions persist.
+
     LogDebug(@"%d regions registered already",[_locationManager.monitoredRegions count]);
 
-    // 2. Can check the monitoredRegions read-only property to see what is there.
     for(CLRegion *region in _locationManager.monitoredRegions) {
         LogDebug(@"Registered Region : %@", region.identifier);
     }
@@ -81,7 +80,6 @@
                                                                     identifier:CLOUD_GATE_IDENTIFIER];
     [_locationManager startMonitoringForRegion:cloudGateRegion];
     
-    // 3. Notice the behavior here. It is NOT instantaneous.
     LogDebug(@"Monitoring %d regions",[_locationManager.monitoredRegions count]);    
 }
 
@@ -115,7 +113,6 @@
     [self showAlert:@"Exiting Region" forRegion:region.identifier];
 }
 
-// 4. We can get error messages via callbacks from the locationManager
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
     LogDebug(@"%@", error);
 }
@@ -124,7 +121,6 @@
     LogDebug(@"%@ failed with:\n%@", region.identifier, error);
 }
 
-// 5. A notification that a region is now being monitored (Buggy in iOS 5 Simulator)
 - (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region {
     LogDebug(@"Starting to monitor : %@", region.identifier);
 }
