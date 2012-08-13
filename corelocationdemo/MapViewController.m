@@ -26,13 +26,17 @@
 
     _mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, 320, 400)];
     [_mapView setRegion:MKCoordinateRegionMakeWithDistance(initialCoordinate, 400, 400) animated:YES];
-    [_mapView setCenterCoordinate:initialCoordinate];
+    _mapView.centerCoordinate = initialCoordinate;
+    
+    // 1. Enable the 'blue dot' to show user location and enable map to follow it
+    _mapView.showsUserLocation = YES;
+    [_mapView setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
     
     _locationManager = [[CLLocationManager alloc] init];
     _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     _locationManager.purpose = @"Please let me track you! For demo purposes of course.";
     
-    // 1. Create a label to display lat and long
+    // 2. Create a label to display lat and long
     _label = [[UILabel alloc] initWithFrame:CGRectMake(20, 419, 280, 21)];
     _label.backgroundColor = [UIColor clearColor];
     _label.textColor = [UIColor whiteColor];
@@ -50,7 +54,7 @@
 }
 
 - (void) initializeLocationManager {
-    // 3. Wire up the location manager delegate to the view controller
+    // 4. Wire up the location manager delegate to the view controller
     _locationManager.delegate = self;
     
     if ([CLLocationManager locationServicesEnabled]) {
@@ -77,7 +81,7 @@
 
 #pragma mark - Location Manager Callback Methods
 
-// 4. Handle location updates
+// 5. Handle location updates
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
     _label.text = [NSString stringWithFormat:@"%f, %f", newLocation.coordinate.latitude, newLocation.coordinate.longitude];
 }
