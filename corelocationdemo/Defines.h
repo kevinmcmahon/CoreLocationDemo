@@ -7,3 +7,4 @@
 //
 
 #define BACKGROUND_IMAGE @"Default"
+#define CLOUD_GATE_IDENTIFIER @"Cloud Gate"

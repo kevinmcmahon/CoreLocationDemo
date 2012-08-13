@@ -54,12 +54,10 @@
     if ([CLLocationManager locationServicesEnabled]) {
         LogDebug(@"Location services enabled.");
 
-        // 1. Check to ensure region monitoring is available.
         if (CLLocationManager.regionMonitoringAvailable
                 && CLLocationManager.regionMonitoringEnabled) {
             LogDebug(@"Region monitoring available and enabled.");
 
-            // 2. Create a location to monitor
             [self registerRegionsForMonitoring];
         }
 
@@ -68,15 +66,23 @@
 }
 
 - (void)registerRegionsForMonitoring {
-    // 2a. Create a location to monitor
+    // 1. NOTE: Monitored regions persist.
+    LogDebug(@"%d regions registered already",[_locationManager.monitoredRegions count]);
+
+    // 2. Can check the monitoredRegions read-only property to see what is there.
+    for(CLRegion *region in _locationManager.monitoredRegions) {
+        LogDebug(@"Registered Region : %@", region.identifier);
+    }
+
     CLLocationCoordinate2D cloudGate = CLLocationCoordinate2DMake(41.882669, -87.623297);
 
     CLRegion *cloudGateRegion = [[CLRegion alloc] initCircularRegionWithCenter:cloudGate
                                                                         radius:100.0
-                                                                    identifier:@"Cloud Gate"];
-
-    // 2b. Tell the location manager to start watching for this region
+                                                                    identifier:CLOUD_GATE_IDENTIFIER];
     [_locationManager startMonitoringForRegion:cloudGateRegion];
+    
+    // 3. Notice the behavior here. It is NOT instantaneous.
+    LogDebug(@"Monitoring %d regions",[_locationManager.monitoredRegions count]);    
 }
 
 - (void)viewDidLoad {
@@ -99,8 +105,6 @@
     _label.text = [NSString stringWithFormat:@"%f, %f", newLocation.coordinate.latitude, newLocation.coordinate.longitude];
 }
 
-// 3. Implement callbacks to know when region threshold crossed
-
 - (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
     LogDebug(@"Entered Region - %@", region.identifier);
     [self showAlert:@"Entering Region" forRegion:region.identifier];
@@ -109,6 +113,20 @@
 - (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region {
     LogDebug(@"Exited Region - %@", region.identifier);
     [self showAlert:@"Exiting Region" forRegion:region.identifier];
+}
+
+// 4. We can get error messages via callbacks from the locationManager
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    LogDebug(@"%@", error);
+}
+
+- (void)locationManager:(CLLocationManager *)manager monitoringDidFailForRegion:(CLRegion *)region withError:(NSError *)error {
+    LogDebug(@"%@ failed with:\n%@", region.identifier, error);
+}
+
+// 5. A notification that a region is now being monitored (Buggy in iOS 5 Simulator)
+- (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region {
+    LogDebug(@"Starting to monitor : %@", region.identifier);
 }
 
 - (void) showAlert:(NSString *)alertText forRegion:(NSString *)regionIdentifier {
