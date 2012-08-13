@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-// 3. Implement the location manager delegate 
 @interface MapViewController : UIViewController<CLLocationManagerDelegate> {
 }
 
